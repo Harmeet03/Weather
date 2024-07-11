@@ -21,6 +21,8 @@ function App() {
         const data = await response.json();
         setWeather(data);
         setNone(false);
+        s_error.style.display = 'none';
+        srv_error.style.display = 'none';
       }
       else{
         console.log('Error in fetching data');
