@@ -1,6 +1,7 @@
 import './App.css';
 import { Helmet } from 'react-helmet';
 import React, { useEffect, useState } from "react";
+import logo from './assets/Weather.png'
 
 function App() {
   const [city, setCity] = useState('');
@@ -58,17 +59,22 @@ function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Helmet>
 
-      <form className='search' onSubmit={FetchData}>
-        <input name='search' type='text' placeholder='Enter city' required onChange={(e) => setCity(e.target.value)}></input>
-        <button type='submit'><i className='fa fa-search'></i></button>
+      <form onSubmit={FetchData}>
+        <div className='logo'>
+          <img src={logo}></img>
+        </div>
+        <div className='search'>
+          <input name='search' type='text' placeholder='Enter city' required onChange={(e) => setCity(e.target.value)}></input>
+          <button type='submit'><i className='fa fa-search'></i></button>
+        </div>
       </form>
 
       {loading ? (
-        <p> Search for Weather Updates </p>
+        <p className='msg'> Search for Weather Updates </p>
       ) 
       : (
         none ? (
-          <p> Oops.. </p>
+          <p className='msg'> Oops.. </p>
         ) 
         : (
           <div className='content' id='content'>
@@ -85,7 +91,7 @@ function App() {
                 <div className='temp'>
                   <h3> Temperature </h3>
                   <p> {weather.main?.temp} °C </p>
-                </div>
+                </div><br></br><br></br>
                 <div className='extra'>
                   <div className='wind'>
                     <h3> Wind </h3>
@@ -107,8 +113,17 @@ function App() {
         )
       )}
 
-      <p id='search_error' style={{display: 'none'}}> Kindly Search the correct place </p>
-      <p id='server_error' style={{display: 'none'}}> Server Error. </p>
+      <p className='msg' id='search_error' style={{display: 'none'}}> Kindly Search the correct place </p>
+      <p className='msg' id='server_error' style={{display: 'none'}}> Server Error. </p>
+
+      <footer style={{backgroundColor: 'black', color: 'white', margin: 0, padding: '40px 0px', textAlign: 'center'}}>
+            <div className="left">
+                <h1 style={{color: 'skyblue'}}> AJJ MAUSAM </h1>
+            </div>
+            <div className="right">
+                <p> This website is for demonstration of my skills purpose only. No copyright intended </p>
+            </div>
+        </footer>
     </>
   );
 }
