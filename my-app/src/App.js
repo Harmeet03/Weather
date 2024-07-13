@@ -17,7 +17,6 @@ function App() {
       const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ca2c79f29c31549b8e4e93c97cf0a293&units=metric`);
 
       if(response.ok){
-        console.log(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ca2c79f29c31549b8e4e93c97cf0a293&units=metric`);
         setLoading(false);
         const data = await response.json();
         setWeather(data);
