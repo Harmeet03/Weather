@@ -39,6 +39,27 @@ form{
     border-radius: 15px;
 }
 
+/* FOR MOBILE CSS */
+@media only screen and (max-width: 1200px){
+    .search > input{
+        width: 300px;
+        padding: 10px 10px;
+        font-size: 20px;
+    }
+    .search > button{
+        padding: 15px 15px;
+        border-radius: 15px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .search > input{
+        width: 200px;
+        padding: 10px 10px;
+        font-size: 20px;
+    }
+}
+
 /* -------------------- */
 
 /* ---- PLACE NAME CSS ---- */
@@ -51,6 +72,15 @@ form{
     padding: 20px 20px;
     width: 400px;
     color: black;
+}
+
+/* PLACE NAME MOBILE CSS */
+@media only screen and (max-width: 1200px){
+    .content > .place{
+        padding: 10px 10px;
+        width: 350px;
+        color: black;
+    }
 }
 
 /* ------------------------ */
@@ -144,9 +174,31 @@ form{
     font-size: 30px;
 }
 
+/* TEMP DETAIL MOBILE CSS */
+@media only screen and (max-width: 1200px){
+    .temp_detail{
+        flex-direction: column;
+        width: 350px;
+        padding: 20px 0px;
+        gap: 40px;
+    }
+
+    .temp_detail > .right > .extra > .wind > p{
+        font-size: 16px;
+    }
+
+    .temp_detail > .right > .extra > .humidity > p{
+        font-size: 16px;
+    }
+
+    .temp_detail > .right > .extra > .feels > p{
+        font-size: 16px;
+    }
+}
+
 /* ------------------------------ */
 
-/* ERROR MESSGAE CSS */
+/* ERROR MESSAGE CSS */
 .msg{
     text-align: center;
     color: black;
