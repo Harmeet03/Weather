@@ -116,13 +116,13 @@ function App() {
       <p className='msg' id='server_error' style={{display: 'none'}}> Server Error. </p>
 
       <footer style={{backgroundColor: 'black', color: 'white', margin: 0, padding: '40px 0px', textAlign: 'center'}}>
-            <div className="left">
-                <h1 style={{color: 'skyblue'}}> AJJ MAUSAM </h1>
-            </div>
-            <div className="right">
-                <p> This website is for demonstration of my skills purpose only. No copyright intended </p>
-            </div>
-        </footer>
+        <div className="left">
+            <h1 style={{color: 'skyblue'}}> AJJ MAUSAM </h1>
+        </div>
+        <div className="right">
+            <p> This website is for demonstration of my skills purpose only. No copyright intended </p>
+        </div>
+      </footer>
     </>
   );
 }
